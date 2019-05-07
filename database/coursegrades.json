@@ -1,0 +1,65 @@
+[
+    {
+        "adminDate": "2019-03-29 10:20:23",
+        "adminId": "1004",
+        "grade": "4",
+        "gradedate": "2019-03-29 09:48:53",
+        "instanceId": "DTEK1049_2019",
+        "studentId": "1019",
+        "teacherId": "1013"
+    },
+    {
+        "adminDate": "",
+        "adminId": "0",
+        "grade": "5",
+        "gradedate": "2019-03-29 09:48:53",
+        "instanceId": "DTEK1049_2019",
+        "studentId": "1028",
+        "teacherId": "1013"
+    },
+    {
+        "adminDate": "",
+        "adminId": "0",
+        "grade": "1",
+        "gradedate": "2019-03-29 09:48:53",
+        "instanceId": "DTEK1049_2019",
+        "studentId": "1031",
+        "teacherId": "1013"
+    },
+    {
+        "adminDate": "",
+        "adminId": "0",
+        "grade": "2",
+        "gradedate": "2019-03-29 09:48:53",
+        "instanceId": "DTEK1049_2019",
+        "studentId": "1038",
+        "teacherId": "1013"
+    },
+    {
+        "adminDate": "",
+        "adminId": "0",
+        "grade": "3",
+        "gradedate": "2019-03-29 09:48:53",
+        "instanceId": "DTEK1049_2019",
+        "studentId": "1041",
+        "teacherId": "1013"
+    },
+    {
+        "adminDate": "",
+        "adminId": "0",
+        "grade": "4",
+        "gradedate": "2019-03-29 09:48:53",
+        "instanceId": "DTEK1049_2019",
+        "studentId": "1046",
+        "teacherId": "1013"
+    },
+    {
+        "adminDate": "",
+        "adminId": "0",
+        "grade": "5",
+        "gradedate": "2019-03-29 09:48:53",
+        "instanceId": "DTEK1049_2019",
+        "studentId": "1047",
+        "teacherId": "1013"
+    }
+]

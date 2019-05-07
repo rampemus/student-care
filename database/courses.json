@@ -1,0 +1,638 @@
+[
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Security Engineering",
+        "shortName": "DTEK0039"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Acquisition and Analysis of Biosignals",
+        "shortName": "DTEK0042"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "IoT Systems: Design and Applications",
+        "shortName": "DTEK0043"
+    },
+    {
+        "credits": "2",
+        "description": "",
+        "name": "Project Management",
+        "shortName": "DTEK0044"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Technological Systems, Foresight and Societal Change",
+        "shortName": "DTEK0046"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Product Development and Management - PDM",
+        "shortName": "DTEK0048"
+    },
+    {
+        "credits": "4",
+        "description": "",
+        "name": "Sulautetut prosessorijärjestelmät",
+        "shortName": "DTEK1019"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Diplomityöseminaari",
+        "shortName": "DTEK1020"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Tiedonsiirron perusteet",
+        "shortName": "DTEK1039"
+    },
+    {
+        "credits": "2",
+        "description": "",
+        "name": "Teollisuustalouden ja tuote- ja palveluliiketoiminnan opintojakso",
+        "shortName": "DTEK1044"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Insinöörityön perusteet",
+        "shortName": "DTEK1045"
+    },
+    {
+        "credits": "4",
+        "description": "",
+        "name": "Olio-ohjelmoinnin metodiikka",
+        "shortName": "DTEK1048"
+    },
+    {
+        "credits": "4",
+        "description": "",
+        "name": "Käyttöliittymät",
+        "shortName": "DTEK1049"
+    },
+    {
+        "credits": "4",
+        "description": "",
+        "name": "Tietoverkkotekniikat",
+        "shortName": "DTEK1050"
+    },
+    {
+        "credits": "4",
+        "description": "",
+        "name": "Tietokonearkkitehtuurit ja käyttöjärjestelmät",
+        "shortName": "DTEK1051"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Energy Efficient Embedded Electronics",
+        "shortName": "DTEK1057"
+    },
+    {
+        "credits": "4",
+        "description": "",
+        "name": "Tietoyhteiskunta ja kyberturvallisuus",
+        "shortName": "DTEK1064"
+    },
+    {
+        "credits": "4",
+        "description": "",
+        "name": "Hajautetut ohjelmistojärjestelmät ja pilvipalvelut",
+        "shortName": "DTEK1066"
+    },
+    {
+        "credits": "1",
+        "description": "",
+        "name": "Opiskelun ja työelämän tietotekniikka, Digitaalisuus",
+        "shortName": "DTEK1067"
+    },
+    {
+        "credits": "1",
+        "description": "",
+        "name": "Opiskelun ja työelämän tietotekniikka, Tieto-ja kyberturvallisuus",
+        "shortName": "DTEK1068"
+    },
+    {
+        "credits": "1",
+        "description": "",
+        "name": "Opiskelun ja työelämän tietotekniikka, Toimistosovellukset",
+        "shortName": "DTEK1069"
+    },
+    {
+        "credits": "1",
+        "description": "",
+        "name": "Opiskelun ja työelämän tietotekniikka, Unix",
+        "shortName": "DTEK1070"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Health Informatics",
+        "shortName": "DTEK1075"
+    },
+    {
+        "credits": "1",
+        "description": "",
+        "name": "Opiskelun ja työelämän tietotekniikka, Matlab",
+        "shortName": "DTEK1076"
+    },
+    {
+        "credits": "4",
+        "description": "",
+        "name": "Ohjelmistotuotannon peruskurssi",
+        "shortName": "DTEK1201"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Mikroprosessorit",
+        "shortName": "DTEK1203"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Lineaariset järjestelmät ja piirit",
+        "shortName": "DTEK1205"
+    },
+    {
+        "credits": "4",
+        "description": "",
+        "name": "Elektroniikkajärjestelmät",
+        "shortName": "DTEK1206"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Digitaaliset tietoliikennejärjestelmät",
+        "shortName": "DTEK1207"
+    },
+    {
+        "credits": "3",
+        "description": "",
+        "name": "Digitaalinen signaalinkäsittely",
+        "shortName": "DTEK1208"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Multiprocessor Architectures",
+        "shortName": "DTEK2027"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Human Element in Information Security",
+        "shortName": "DTEK2029"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Communication Technologies and Security in IoT",
+        "shortName": "DTEK2034"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Industrial Seminar on Future Technologies",
+        "shortName": "DTEK2036"
+    },
+    {
+        "credits": "10",
+        "description": "",
+        "name": "Lean Platform Business Design",
+        "shortName": "DTEK2037"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Co-Creation in Product Development",
+        "shortName": "DTEK2038"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Technology Design in Context",
+        "shortName": "DTEK2039"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Web- ja mobiiliohjelmointi",
+        "shortName": "DTEK2040"
+    },
+    {
+        "credits": "4",
+        "description": "",
+        "name": "Sulautettujen järjestelmien ohjelmointi",
+        "shortName": "DTEK2041"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "System and Application Security",
+        "shortName": "DTEK8025"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Protocol Processing and Security",
+        "shortName": "DTEK8060"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Firewall and IPS Technology",
+        "shortName": "DTEK8063"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "HDL Based Design",
+        "shortName": "DTEK8067"
+    },
+    {
+        "credits": "15",
+        "description": "",
+        "name": "Capstone Project",
+        "shortName": "DTEK8076"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Medical Instrumentation",
+        "shortName": "DTEK8080"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Embedded IoT Programming",
+        "shortName": "DTEK8081"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "FPGA Prototyping and Configurable Computing",
+        "shortName": "DTEK8082"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Digital Systems Engineering",
+        "shortName": "DTEK8083"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Autonomous Systems Architectures",
+        "shortName": "DTEK8085"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Sensors and Interfaces",
+        "shortName": "DTEK8086"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Analog IC Design",
+        "shortName": "DTEK8088"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Mixed-Mode IC Design",
+        "shortName": "DTEK8089"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "RF IC Design",
+        "shortName": "DTEK8090"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Master’s Thesis Seminar, Health Technology, Medical Analytics and Health IoT",
+        "shortName": "DTEK8094"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "DSP System Engineering",
+        "shortName": "DTEK8095"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Network Infrastructure Technologies and Security",
+        "shortName": "DTEK8096"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Secure Sensor Network Systems",
+        "shortName": "DTEK8097"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Software Development and Software Security",
+        "shortName": "DTEK8098"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Practical Software Quality Management, Testing and Estimation",
+        "shortName": "DTEK8099"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Advanced Programming Techniques",
+        "shortName": "DTEK8101"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Privacy and Security for Software Systems",
+        "shortName": "DTEK8102"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Software Design and Architecture",
+        "shortName": "DTEK8103"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Software Engineering Seminar",
+        "shortName": "DTEK8104"
+    },
+    {
+        "credits": "7",
+        "description": "",
+        "name": "Software House",
+        "shortName": "DTEK8105"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Digital Standard Cell Integration",
+        "shortName": "DTEK8106"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Mismatch in IC Design",
+        "shortName": "DTEK8107"
+    },
+    {
+        "credits": "3",
+        "description": "",
+        "name": "Engineering Profession",
+        "shortName": "DTEK8110"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Olio-ohjelmoinnin perusteet",
+        "shortName": "TKO_2005"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Interactive Storytelling",
+        "shortName": "TKO_2029"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Algoritmien ja ohjelmoinnin peruskurssi",
+        "shortName": "TKO_2038"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Introduction to Game Development Tools",
+        "shortName": "TKO_2081"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Applications of Data Analysis",
+        "shortName": "TKO_2096"
+    },
+    {
+        "credits": "2",
+        "description": "",
+        "name": "Johdatus tekoälyyn",
+        "shortName": "TKO_2103"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Data Analysis and Knowledge Discovery",
+        "shortName": "TKO_3103"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Data ja vuorovaikutus",
+        "shortName": "TKO_3104"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Tietorakenteet ja algoritmit",
+        "shortName": "TKO_3107"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Algorithm Design",
+        "shortName": "TKO_3108"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Advanced Algorithm Design",
+        "shortName": "TKO_3109"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Principles of Interaction Design",
+        "shortName": "TKO_3110"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Game Design",
+        "shortName": "TKO_3112"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Educational Technology and Technology Education",
+        "shortName": "TKO_3113"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Learning Analytics",
+        "shortName": "TKO_3115"
+    },
+    {
+        "credits": "3",
+        "description": "",
+        "name": "Orientoivat opinnot, tietojenkäsittelytiede",
+        "shortName": "TKO_3117"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "IxD Seminar",
+        "shortName": "TKO_3118"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Machine Learning and Pattern Recognition",
+        "shortName": "TKO_3120"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Machine Learning and Algorithmics Seminar",
+        "shortName": "TKO_3121"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Tietokantojen perusteet 1",
+        "shortName": "TKO_3122"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Practical Course in Digital Educational Technologies",
+        "shortName": "TKO_3125"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Game Testing",
+        "shortName": "TKO_3127"
+    },
+    {
+        "credits": "3",
+        "description": "",
+        "name": "Tekoälyn perusmenetelmät",
+        "shortName": "TKO_3128"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Project Course on Game Development",
+        "shortName": "TKO_5061"
+    },
+    {
+        "credits": "2",
+        "description": "",
+        "name": "Tietokantojen perusteet 2",
+        "shortName": "TKO_5735"
+    },
+    {
+        "credits": "3",
+        "description": "",
+        "name": "Tietojenkäsittelyn perusteet I",
+        "shortName": "TKO_5736"
+    },
+    {
+        "credits": "2",
+        "description": "",
+        "name": "Tietojenkäsittelyn perusteet I, tentti",
+        "shortName": "TKO_5737"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Tietojenkäsittelyn perusteet II",
+        "shortName": "TKO_5738"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Digital Art Master Class",
+        "shortName": "TKO_5739"
+    },
+    {
+        "credits": "1",
+        "description": "",
+        "name": "Algoritmien ja ohjelmoinnin peruskurssin harjoitustyö",
+        "shortName": "TKO_8558"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Deep Learning",
+        "shortName": "TKO_8612"
+    },
+    {
+        "credits": "2",
+        "description": "",
+        "name": "Olio-ohjelmoinnin perusteiden harjoitustyö",
+        "shortName": "TKO_8956"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Mixed Reality",
+        "shortName": "TKO_8960"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Textual Data Analysis",
+        "shortName": "TKO_8964"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Johdatus kieliteknologiaan",
+        "shortName": "TKO_8966"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Research Methods and Tools",
+        "shortName": "TKO_8967"
+    },
+    {
+        "credits": "5",
+        "description": "",
+        "name": "Gamification and Serious Games",
+        "shortName": "TKO_8969"
+    },
+    {
+        "credits": "3",
+        "description": "",
+        "name": "Soveltuva projekti, Tulevaisuuden teknologioiden laitos",
+        "shortName": "TKO_8971"
+    },
+    {
+        "credits": "10",
+        "description": "",
+        "name": "LuK-tutkielma ja seminaari, tietojenkäsittelytiede",
+        "shortName": "TKO_8981"
+    }
+]

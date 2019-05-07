@@ -1,0 +1,474 @@
+[
+    {
+        "id": "GEO2",
+        "name": "Geologian tutkinto-ohjelma (FM)"
+    },
+    {
+        "id": "TER",
+        "name": "Terveyden biotieteiden koulutusohjelma"
+    },
+    {
+        "id": "VAL",
+        "name": "Valtio-oppi"
+    },
+    {
+        "id": "KLA",
+        "name": "Klassilliset kielet ja antiikin kulttuuri"
+    },
+    {
+        "id": "MED2",
+        "name": "Mediatutkimus, musiikkitiede ja taidehistoria"
+    },
+    {
+        "id": "KUL",
+        "name": "Kulttuurihistoria"
+    },
+    {
+        "id": "LOG",
+        "name": "Logopedia"
+    },
+    {
+        "id": "ARK2",
+        "name": "Arkeologia, kulttuurihistoria, Suomen historia ja yleinen historia"
+    },
+    {
+        "id": "POH",
+        "name": "Pohjoismaiset kielet"
+    },
+    {
+        "id": "MAA",
+        "name": "Maantiede"
+    },
+    {
+        "id": "POL",
+        "name": "Poliittinen historia"
+    },
+    {
+        "id": "SUO",
+        "name": "Suomen historia"
+    },
+    {
+        "id": "LUO2",
+        "name": "Luokanopettajan koulutus, Turku"
+    },
+    {
+        "id": "TOI",
+        "name": "Toimitusketjujen johtaminen"
+    },
+    {
+        "id": "GEO",
+        "name": "Geologia"
+    },
+    {
+        "id": "KEM",
+        "name": "Kemia"
+    },
+    {
+        "id": "KAS4",
+        "name": "Kasvatustieteiden koulutus, erityispedagogiikka"
+    },
+    {
+        "id": "KAS3",
+        "name": "Kasvatustieteiden koulutus, aikuiskasvatustiede"
+    },
+    {
+        "id": "KAS2",
+        "name": "Kasvatustieteiden koulutus"
+    },
+    {
+        "id": "ARK",
+        "name": "Arkeologia"
+    },
+    {
+        "id": "KAS5",
+        "name": "Kasvatustieteiden koulutus, kasvatustiede"
+    },
+    {
+        "id": "MAS",
+        "name": "Master's Degree Pathway in Popular Culture Studies"
+    },
+    {
+        "id": "MAR",
+        "name": "Markkinointi"
+    },
+    {
+        "id": "MAT",
+        "name": "Matematiikan tutkinto-ohjelma (FM)"
+    },
+    {
+        "id": "KIE2",
+        "name": "Kieliasiantuntijuuden tutkinto-ohjelma"
+    },
+    {
+        "id": "BIO6",
+        "name": "Biotekniikka"
+    },
+    {
+        "id": "YRI",
+        "name": "Yrittäjyys"
+    },
+    {
+        "id": "BIO5",
+        "name": "Biotekniikan tutkinto-ohjelma (DI)"
+    },
+    {
+        "id": "BIO4",
+        "name": "Biolääketieteen koulutusohjelma"
+    },
+    {
+        "id": "BIO3",
+        "name": "Biologia"
+    },
+    {
+        "id": "BIO2",
+        "name": "Biokemian tutkinto-ohjelma (FM)"
+    },
+    {
+        "id": "LAS3",
+        "name": "Lastentarhanopettajan koulutus, Rauma"
+    },
+    {
+        "id": "ASI",
+        "name": "Asiantuntijaorganisaatioiden liiketoimintaosaamisen maist.ohj., Pori"
+    },
+    {
+        "id": "LAS2",
+        "name": "Laskentatoimi ja rahoitus, Pori"
+    },
+    {
+        "id": "KAN2",
+        "name": "Kansatiede"
+    },
+    {
+        "id": "ESP",
+        "name": "Espanja"
+    },
+    {
+        "id": "EKO",
+        "name": "Ekologian ja evoluutiobiologian tutkinto-ohjelma (FM)"
+    },
+    {
+        "id": "USK",
+        "name": "Uskontotiede"
+    },
+    {
+        "id": "KAU2",
+        "name": "Kauppatieteet, erillisvalinta KTK-tutkinnon perusteella"
+    },
+    {
+        "id": "KOU",
+        "name": "Koulutussosiologian ja -politiikan maisteriohjelma"
+    },
+    {
+        "id": "KOT",
+        "name": "Kotimainen kirjallisuus"
+    },
+    {
+        "id": "TIE",
+        "name": "Tietojenkäsittelytieteet"
+    },
+    {
+        "id": "FYS3",
+        "name": "Fysikaalisten tieteiden tutkinto-ohjelma (FM)"
+    },
+    {
+        "id": "KUL3",
+        "name": "Kulttuurituotannon ja maisemantutkimuksen koul.ohj., Pori"
+    },
+    {
+        "id": "FYS2",
+        "name": "Fysikaaliset tieteet"
+    },
+    {
+        "id": "KUL2",
+        "name": "Kulttuurihistoria, Suomen historia ja yleinen historia"
+    },
+    {
+        "id": "FYS4",
+        "name": "Fysiologian ja genetiikan tutkinto-ohjelma (FM)"
+    },
+    {
+        "id": "HAM",
+        "name": "Hammaslääketiede"
+    },
+    {
+        "id": "KAU5",
+        "name": "Kauppatieteet, Turku"
+    },
+    {
+        "id": "KAU4",
+        "name": "Kauppatieteet, Pori"
+    },
+    {
+        "id": "SOS",
+        "name": "Sosiaalipolitiikka"
+    },
+    {
+        "id": "TER2",
+        "name": "Terveystieteiden koulutus"
+    },
+    {
+        "id": "TIL",
+        "name": "Tilastotieteen tutkinto-ohjelma (FM)"
+    },
+    {
+        "id": "ITA",
+        "name": "Italia"
+    },
+    {
+        "id": "KAU3",
+        "name": "Kauppatieteet, kansainvälisen johtamisen ja yrittäjyyden tutkinto-ohjelma"
+    },
+    {
+        "id": "KEM2",
+        "name": "Kemian tutkinto-ohjelma (FM)"
+    },
+    {
+        "id": "TAI",
+        "name": "Taidehistoria"
+    },
+    {
+        "id": "LAT",
+        "name": "Latinalainen filologia"
+    },
+    {
+        "id": "TAL",
+        "name": "Talousmaantiede"
+    },
+    {
+        "id": "VEN",
+        "name": "Venäjän kieli"
+    },
+    {
+        "id": "LAS",
+        "name": "Laskentatoimi ja rahoitus"
+    },
+    {
+        "id": "POL2",
+        "name": "Poliittinen historia ja valtio-oppi"
+    },
+    {
+        "id": "SUO4",
+        "name": "Suomen kieli ja suomalais-ugrilainen kielentutkimus/suomen kieli"
+    },
+    {
+        "id": "SUO3",
+        "name": "Suomen kieli ja suomalais-ugrilainen kielentutkimus"
+    },
+    {
+        "id": "SUO2",
+        "name": "Suomen ja sen sukukielten maisteriohjelma"
+    },
+    {
+        "id": "ELI",
+        "name": "Elintarvikekemian tutkinto-ohjelma (FM)"
+    },
+    {
+        "id": "POL3",
+        "name": "Politiikan tutkimus"
+    },
+    {
+        "id": "MAA2",
+        "name": "Maantieteen tutkinto-ohjelma (FM)"
+    },
+    {
+        "id": "OHJ",
+        "name": "Ohjelmistotekniikan tutkinto-ohjelma (muuntokoulutus) (DI)"
+    },
+    {
+        "id": "YLE",
+        "name": "Yleinen historia"
+    },
+    {
+        "id": "MAR2",
+        "name": "Markkinointi, Pori"
+    },
+    {
+        "id": "FOL",
+        "name": "Folkloristiikka"
+    },
+    {
+        "id": "JOH",
+        "name": "Johtaminen ja organisointi"
+    },
+    {
+        "id": "KIE",
+        "name": "Kielen oppimisen ja opettamisen tutkinto-ohjelma"
+    },
+    {
+        "id": "MUS",
+        "name": "Musiikkitiede"
+    },
+    {
+        "id": "MOL2",
+        "name": "Molekulaarisen kasvibiologian ja bioenergetiikan tutkinto-ohjelma (FM)"
+    },
+    {
+        "id": "MED",
+        "name": "Mediatutkimus"
+    },
+    {
+        "id": "MOL3",
+        "name": "Molekulaarisen solubiologian tutkinto-ohjelma (FM)"
+    },
+    {
+        "id": "OIK",
+        "name": "Oikeustieteen maisterin koulutus"
+    },
+    {
+        "id": "TAL5",
+        "name": "Taloustieteiden kvantitatiiviset menetelmät"
+    },
+    {
+        "id": "TAL4",
+        "name": "Taloustiede (VTM)"
+    },
+    {
+        "id": "TAL3",
+        "name": "Taloustiede (KTM)"
+    },
+    {
+        "id": "TAL2",
+        "name": "Taloussosiologia"
+    },
+    {
+        "id": "KIR",
+        "name": "Kirjallisuustieteet"
+    },
+    {
+        "id": "PSY",
+        "name": "Psykologia"
+    },
+    {
+        "id": "KAN",
+        "name": "Kansainvälinen liiketoiminta"
+    },
+    {
+        "id": "SOS3",
+        "name": "Sosiaalityö"
+    },
+    {
+        "id": "SOS4",
+        "name": "Sosiologia"
+    },
+    {
+        "id": "KAS",
+        "name": "Kasvatustieteen (varhaiskasvatuksen) maisteriohjelma"
+    },
+    {
+        "id": "SAK",
+        "name": "Saksan kieli"
+    },
+    {
+        "id": "SOS2",
+        "name": "Sosiaalitieteet"
+    },
+    {
+        "id": "YMP",
+        "name": "Ympäristötieteen tutkinto-ohjelma (LuK)"
+    },
+    {
+        "id": "KAU",
+        "name": "Kaupan ja palvelujen maisteriohjelma"
+    },
+    {
+        "id": "ENG",
+        "name": "Englannin kieli"
+    },
+    {
+        "id": "KRE",
+        "name": "Kreikkalainen filologia"
+    },
+    {
+        "id": "YLE2",
+        "name": "Yleinen kirjallisuustiede"
+    },
+    {
+        "id": "YRI2",
+        "name": "Yritysjuridiikka"
+    },
+    {
+        "id": "JOH2",
+        "name": "Johtaminen ja organisointi, Pori"
+    },
+    {
+        "id": "FOL2",
+        "name": "Folkloristiikka, kansatiede ja uskontotiede"
+    },
+    {
+        "id": "INT",
+        "name": "International Master in Management of IT (yhteistutkinto)"
+    },
+    {
+        "id": "MAT2",
+        "name": "Matematiikka ja tilastotiede"
+    },
+    {
+        "id": "TIE7",
+        "name": "Tietotekniikka"
+    },
+    {
+        "id": "FYS",
+        "name": "Fysiikan opettajan tutkinto-ohjelma (FM)"
+    },
+    {
+        "id": "TIE6",
+        "name": "Tietotekniikan tutkinto-ohjelma (Master's Programme in Information and Comm. Tech.) (yhteistutkinto)"
+    },
+    {
+        "id": "TIE5",
+        "name": "Tietotekniikan tutkinto-ohjelma (DI)"
+    },
+    {
+        "id": "TIE4",
+        "name": "Tietojärjestelmätiede (KTM)"
+    },
+    {
+        "id": "TIE3",
+        "name": "Tietojärjestelmätiede (FM)"
+    },
+    {
+        "id": "TIE2",
+        "name": "Tietojenkäsittelytieteiden tutkinto-ohjelma (FM)"
+    },
+    {
+        "id": "LUO",
+        "name": "Luokanopettajan koulutus, Rauma"
+    },
+    {
+        "id": "FIL",
+        "name": "Filosofia"
+    },
+    {
+        "id": "BIO",
+        "name": "Biokemia"
+    },
+    {
+        "id": "MOL",
+        "name": "Molekulaarisen biotekniikan ja diagnostiikan tutkinto-ohjelma (FM)"
+    },
+    {
+        "id": "MON",
+        "name": "Monikielisen käännösviestinnän tutkinto-ohjelma"
+    },
+    {
+        "id": "TUR",
+        "name": "Turun kauppakorkeakoulu"
+    },
+    {
+        "id": "NAI",
+        "name": "Nais- ja sukupuolentutkimuksen maisteriohjelma"
+    },
+    {
+        "id": "TEK",
+        "name": "Tekoälyn tutkinto-ohjelma (muuntokoulutus) (FM)"
+    },
+    {
+        "id": "RAN",
+        "name": "Ranska"
+    },
+    {
+        "id": "TEO",
+        "name": "Teoreettisen fysiikan tutkinto-ohjelma (FM)"
+    }
+]
