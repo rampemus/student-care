@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import {Row, Col, DropdownButton, ButtonGroup, Dropdown, Item, FormControl, Form, Button, Navbar} from 'react-bootstrap';
+import {Row, Col, DropdownButton, ButtonGroup, Dropdown, FormControl, Form, Button, Navbar, Nav, Container} from 'react-bootstrap';
+import { createStore } from 'redux';
+import CourseSearch from './components/courseSearch.js';
 import logo from './logo.svg';
 import './App.css';
 
@@ -7,37 +9,60 @@ export default class App extends Component {
   render() {
     return (
     <div className="App">
-    <Navbar bg='light'>
-      <Col><Navbar.Brand href="#home">Student-Care</Navbar.Brand></Col>
+    <Navbar bg='light'  sticky="top">
+      <Col><Navbar.Brand href="home">Student-Care</Navbar.Brand></Col>
       <Col xs={6}>
-          <Form >
+          {/* <Form >
               <FormControl type="text" placeholder="Hae kursseja..." className="mr-sm-2" />
-          </Form>
+          </Form> */}
+          <CourseSearch/>
       </Col>
       <Col>
-      <DropdownButton as={ButtonGroup} title="Opiskelija" id="bg-vertical-dropdown-1">
-              <Dropdown.Item eventKey="1">Opiskelija</Dropdown.Item>
+          <DropdownButton as={ButtonGroup} title="Asetukset" id="bg-vertical-dropdown-1" variant="outline-secondary">
+              <Dropdown.Item eventKey="1"  variant="success">Opiskelija</Dropdown.Item>
               <Dropdown.Item eventKey="2">Opettaja</Dropdown.Item>
               <Dropdown.Item eventKey="3">Hallinto</Dropdown.Item>
+              <Dropdown.Divider />
+              <Dropdown.Item eventKey="4" disabled>Slowmode</Dropdown.Item>
           </DropdownButton>
+
       </Col>
     </Navbar>
-          <header className="App-header">
-              <img src={logo} className="App-logo" alt="logo" />
-              <p>
-                Edit <code>src/App.js</code> and save to reload.
-              </p>
-              <a
-                className="App-link"
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Learn React
-              </a>
-              <DBPreview/>
-          </header>
-      </div>
+    <Row>
+        <Col  xs={3} className="d-flex align-items-end flex-column">
+
+            <Nav defaultActiveKey="/home"
+                variant="pills"
+                bg='dark'
+                className="d-flex align-items-start flex-column"
+                size="sm">
+
+                <Nav.Link href="/home" >Omat kurssit</Nav.Link>
+                <Nav.Link eventKey="credits">Opintosuoritukset</Nav.Link>
+                <Nav.Link eventKey="assesment" disabled>Opetus ja arviointi</Nav.Link>
+                <Nav.Link eventKey="registry" disabled>Opintorekisteri</Nav.Link>
+                <Nav.Link eventKey="signout" variant="link">Kirjaudu ulos</Nav.Link>
+            </Nav>
+
+        </Col>
+
+        <Col>
+            <div id='content-root'>
+                <img src={logo} className="App-logo" alt="logo" />
+                <p>Edit <code>src/App.js</code> and save to reload.</p>
+                <a
+                    className="App-link"
+                    href="https://reactjs.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >Learn React</a>
+                <DBPreview/>
+            </div>
+        </Col>
+    </Row>
+
+    </div>
+
     );
   }
 }
