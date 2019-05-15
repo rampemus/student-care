@@ -41,7 +41,7 @@ export default class CourseView extends React.Component {
             <div>
                 <h1>{this.state.shortName}: {this.state.name}</h1>
                 <p>Kurssi-info!</p>
-                <p>Tämän kurssin propsina tuli </p>
+                <p>Tästä alkaa info</p>
             </div>
         )
     }
