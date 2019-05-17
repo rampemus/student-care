@@ -14,6 +14,7 @@ const initState = {
     student: true,//'personnel[0].isStudent == 1 ? true : false',
     teacher: true, //personnel[0].isTeacher == 1 ? true : false,
     administrator: true, //personnel[0].isAdmin == 1 ? true : false,
+    courseName: '0001'
 }
 
 const userReducer = ( state = initState, action) => {
@@ -40,8 +41,10 @@ const contentReducer = ( state = initState , action ) => {
         case 'SHOW_COURSE':
             state = {
                 ...state,
-                content: action.courseName,
+                content: 'course',
+                courseName: action.courseName,
             }
+            break
         case 'SHOW_COURSES':
             state = {
                 ...state,

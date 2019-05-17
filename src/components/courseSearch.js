@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Autocomplete from 'react-autocomplete';
 import {Row, Col, Container, Button,ButtonToolbar} from 'react-bootstrap';
+import { connect } from 'react-redux';
 import courses from './courses.json';
 import CourseView from './courseView.js';
 
-export default class CourseSearch extends React.Component {
+class CourseSearch extends React.Component {
 
   constructor (props) {
     super(props)
@@ -14,7 +15,10 @@ export default class CourseSearch extends React.Component {
       maxNameLength: '80',
     }
 
+    // this.handleItemSelect = (courseCode) => props.handleItemSelect;
+    // this.handleItemSelect = this.hadleItemSelect.bind(this);
     // this.handleItemClick = this.handleItemClick.bind(this);
+    this.handleItemSelect = props.handleItemSelect.bind(this);
 
   }
 
@@ -58,15 +62,8 @@ export default class CourseSearch extends React.Component {
                 <Col>
                     <ButtonToolbar>
                         <Button variant="link"
-                            key={item.shortName}
+                            key={item.shortName.toString()}
                             style={{textAlign: 'left'}}
-                            onClick={ () => {
-                                const root = document.getElementById('content-root')
-                                ReactDOM.render(<></>,root)
-                                ReactDOM.render(<CourseView
-                                  shortName={item.shortName}
-                                  />,root)
-                            }}
                             >
                             {item.shortName + ': '}
                             {item.name.length > this.state.maxNameLength ?
@@ -93,9 +90,31 @@ export default class CourseSearch extends React.Component {
             e => this.setState({ value: e.target.value })
         }
         onSelect={
-            value => this.setState({ value })
+            value => {
+                this.setState({value});
+                this.props.goToSelectedCourse(value.substring(0,8));
+            }
         }
       />
     )
   }
-}
+};
+
+const mapStateToProps = (state) => {
+    return {
+        //
+    }
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        goToSelectedCourse: (courseCode) => {
+            dispatch({
+                type:'SHOW_COURSE',
+                courseName: courseCode,
+            })
+        }
+    }
+};
+
+export default connect(mapStateToProps,mapDispatchToProps)(CourseSearch);

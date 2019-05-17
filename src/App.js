@@ -24,7 +24,12 @@ class App extends Component {
               {/* <Form >
                   <FormControl type="text" placeholder="Hae kursseja..." className="mr-sm-2" />
               </Form> */}
-              <CourseSearch/>
+              <CourseSearch
+                  handleItemSelect={(courseCode)=>{
+                      this.props.goToSelectedCourse(courseCode)
+                      console.log(courseCode)
+                  }}
+              />
           </Col>
           <Col>
               <DropdownButton as={ButtonGroup} title="Asetukset" id="bg-vertical-dropdown-1" variant="outline-secondary">
@@ -64,21 +69,7 @@ class App extends Component {
 
             </Col>
 
-            <Col>
-                <div id='content-root' >
-                    <h1>
-                        {this.props.content}
-                    </h1>
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <p>Edit <code>src/App.js</code> and save to reload.</p>
-                    <a
-                        className="App-link"
-                        href="https://reactjs.org"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >Learn React</a>
-                </div>
-            </Col>
+            <Col>{    mapStateToContent(this.props.content,this.props.courseName) }</Col>
         </Row>
         <Navbar
             fixed="bottom"
@@ -106,9 +97,22 @@ class App extends Component {
     }
 }
 
+const mapStateToContent = (stateName, courseCode) => {
+    switch( stateName ) {
+            case 'home': return 'homeview'
+            case 'course': return 'course view ' + courseCode
+            case 'courses' : return 'course list'
+            case 'credits' : return 'course list of succeeded courses'
+            case 'teach' : return 'my courses to teach'
+            case 'registry' : return 'admin page'
+        }
+    return 'none'
+}
+
 const mapStateToProps = (state) => {
     return {
         content: state.content,
+        courseName: state.courseName,
         user: state.userName,
         userId: state.userId,
         studentAccess: state.student,
@@ -123,6 +127,12 @@ const mapDispatchToProps = (dispatch) => {
             dispatch({
                 type:'SHOW_HOME',
             });
+        },
+        goToSelectedCourse: () => {
+            dispatch({
+                type:'SHOW_COURSE',
+                // courseName: courseCode,
+            })
         },
         goMyCourses: () => {
             dispatch({
