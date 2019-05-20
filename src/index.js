@@ -75,6 +75,25 @@ const contentReducer = ( state = initState , action ) => {
                 content: 'farewell',
             }
             break;
+        //and for preview purpose:
+        case 'TOGGLE_STUDENT':
+            state = {
+                ...state,
+                student: !state.student,
+            }
+            break;
+        case 'TOGGLE_TEACHER':
+            state = {
+                ...state,
+                teacher: !state.teacher,
+            }
+            break;
+        case 'TOGGLE_ADMIN':
+            state = {
+                ...state,
+                administrator: !state.administrator,
+            }
+            break;
         default:
             state = {
                 ...state,

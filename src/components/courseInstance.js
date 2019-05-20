@@ -32,8 +32,8 @@ export default class CourseInstance extends React.Component {
                 {this.state.courses.map(courses => {
                     return(
                         <Container>
-                        <h2>{courses.instanceid}</h2>
-                        <p>{courses.gradingRule}</p>
+                            <h2>{courses.instanceid}</h2>
+                            <p>{courses.gradingRule}</p>
                         </Container>
                     );
                 })}

@@ -1,9 +1,13 @@
-import React, { Component } from 'react';
-import {Row, Col, DropdownButton, ButtonGroup, Dropdown, FormControl, Form, Button, Navbar, Nav, Container} from 'react-bootstrap';
-import { createStore } from 'redux';
-import { connect } from 'react-redux';
-import CourseSearch from './components/courseSearch.js';
-import CourseInstance from './components/courseInstance.js';
+import React, { Component } from 'react'
+import {Row, Col, DropdownButton, ButtonGroup, Dropdown, FormControl, Form, Button, Navbar, Nav, Container} from 'react-bootstrap'
+import { createStore } from 'redux'
+import { connect } from 'react-redux'
+import CourseSearch from './components/courseSearch.js'
+import CourseInstance from './components/courseInstance.js'
+import MyCourses from './components/myCourses.js'
+import MyTeaching from './components/myTeaching.js'
+import MyCredits from './components/myCredits.js'
+import Registry from './components/registry.js'
 import logo from './logo.svg';
 import './App.css';
 
@@ -33,10 +37,33 @@ class App extends Component {
               />
           </Col>
           <Col>
-              <DropdownButton as={ButtonGroup} title="Asetukset" id="bg-vertical-dropdown-1" variant="outline-secondary">
-                  <Dropdown.Item eventKey="1"  variant="success">Opiskelija</Dropdown.Item>
-                  <Dropdown.Item eventKey="2">Opettaja</Dropdown.Item>
-                  <Dropdown.Item eventKey="3">Hallinto</Dropdown.Item>
+              <DropdownButton as={ButtonGroup}
+                  title="Asetukset"
+                  id="bg-vertical-dropdown-1"
+                  variant="outline-secondary"
+                //access properties would never be accessed from here
+                //but just for previewing options we have these here:
+                onSelect={eventKey => {
+                    switch (eventKey) {
+                        case 'student': this.props.toggleStudent(); break;
+                        case 'teacher': this.props.toggleTeacher(); break;
+                        case 'admin': this.props.toggleAdmin(); break;
+                    }
+                }}
+                >
+                  <Dropdown.Item eventKey="student"
+                      style={this.props.studentAccess ? {color:'green'} : {
+                          color:'red',
+                  }}>
+                    Opiskelija</Dropdown.Item>
+                  <Dropdown.Item eventKey="teacher"
+                      style={this.props.teacherAccess ? {color:'green'} : {
+                      color:'red',
+                  }}>
+                    Opettaja</Dropdown.Item>
+                  <Dropdown.Item eventKey="admin"
+                      style={this.props.adminAccess ? {color:'green'} : {color:'red'}}>
+                    Hallinto</Dropdown.Item>
                   <Dropdown.Divider />
                   <Dropdown.Item eventKey="4" disabled>Slowmode</Dropdown.Item>
               </DropdownButton>
@@ -51,6 +78,7 @@ class App extends Component {
                     bg='dark'
                     className="d-flex align-items-start flex-column"
                     size="sm"
+
                     onSelect={selectedKey => {
                         switch (selectedKey) {
                             case "home": this.props.goMyCourses(); break;
@@ -102,10 +130,10 @@ const mapStateToContent = (stateName, courseCode) => {
     switch( stateName ) {
             case 'home': return 'homeview'
             case 'course': return <CourseInstance courseId={courseCode} />
-            case 'courses' : return 'course list'
-            case 'credits' : return 'course list of succeeded courses'
-            case 'teach' : return 'my courses to teach'
-            case 'registry' : return 'admin page'
+            case 'courses' : return <MyCourses />
+            case 'credits' : return <MyCredits />
+            case 'teach' : return <MyTeaching />
+            case 'registry' : return <Registry />
         }
     return 'none'
 }
@@ -158,6 +186,22 @@ const mapDispatchToProps = (dispatch) => {
         signOut: () => {
             dispatch({
                 type:'SIGNED_OUT',
+            });
+        },
+        //and for previewing we have these
+        toggleStudent: () => {
+            dispatch({
+                type: 'TOGGLE_STUDENT',
+            });
+        },
+        toggleTeacher: () => {
+            dispatch({
+                type: 'TOGGLE_TEACHER',
+            });
+        },
+        toggleAdmin: () => {
+            dispatch({
+                type: 'TOGGLE_ADMIN',
             });
         },
     };
