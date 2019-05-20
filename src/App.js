@@ -3,6 +3,7 @@ import {Row, Col, DropdownButton, ButtonGroup, Dropdown, FormControl, Form, Butt
 import { createStore } from 'redux';
 import { connect } from 'react-redux';
 import CourseSearch from './components/courseSearch.js';
+import CourseInstance from './components/courseInstance.js';
 import logo from './logo.svg';
 import './App.css';
 
@@ -100,7 +101,7 @@ class App extends Component {
 const mapStateToContent = (stateName, courseCode) => {
     switch( stateName ) {
             case 'home': return 'homeview'
-            case 'course': return 'course view ' + courseCode
+            case 'course': return <CourseInstance courseId={courseCode} />
             case 'courses' : return 'course list'
             case 'credits' : return 'course list of succeeded courses'
             case 'teach' : return 'my courses to teach'
