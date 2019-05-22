@@ -47,8 +47,8 @@ export default class Registry extends React.Component {
                                 <tr>
                                     <td>{pending.gradedate}</td>
                                     <td>{pending.instanceId}</td>
-                                    <td><PersonnelCard studentId={pending.studentId}/></td>
-                                    <td><PersonnelCard studentId={pending.teacherId}/></td>
+                                    <td><PersonnelCard studentId={pending.studentId} placement='left'/></td>
+                                    <td><PersonnelCard studentId={pending.teacherId} placement='left'/></td>
                                 </tr>
                             </tbody>
                         );
@@ -72,10 +72,10 @@ export default class Registry extends React.Component {
                             <tr>
                                 <td>{accepted.gradedate}</td>
                                 <td>{accepted.instanceId}</td>
-                                <td><PersonnelCard studentId={accepted.studentId}/></td>
-                                <td><PersonnelCard studentId={accepted.teacherId}/></td>
+                                <td><PersonnelCard studentId={accepted.studentId} placement='left'/></td>
+                                <td><PersonnelCard studentId={accepted.teacherId} placement='left'/></td>
                                 <td>{accepted.adminDate}</td>
-                                <td><PersonnelCard studentId={accepted.adminId}/></td>
+                                <td><PersonnelCard studentId={accepted.adminId} placement='left'/></td>
                             </tr>
                         </tbody>
                     );
