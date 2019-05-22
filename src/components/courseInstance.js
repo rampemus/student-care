@@ -5,12 +5,10 @@ import { connect } from 'react-redux';
 import courseInstances from './courseinstances.json';
 import CourseView from './courseView.js';
 
-export default class CourseInstance extends React.Component {
-    constructor (props) {
-        super(props)
+export const courseInstance = function(courseId) {
 
-        console.log(props.courseId)
-        let courseObjects = [] ;
+        console.log(courseId)
+        let courseObjects = []
         //take last courseInstance that matches with the course id
         for (let i = 0; i < courseInstances.length; i++ ) {
             if ( courseInstances[i].courseId == props.courseId ) {
@@ -18,26 +16,17 @@ export default class CourseInstance extends React.Component {
             }
         }
 
-        this.state = {
-            courses: courseObjects,
-        }
-    }
-
-    //TODO: change this into function and use hooks to update courses-array https://stackoverflow.com/questions/37009328/rerender-react-component-when-prop-changes#37009991
-
-    render() {
         return (
-            <Container>
-                <h1>{this.props.courseId}</h1>
-                {this.state.courses.map(courses => {
+            <div>
+                <h2>{courseId}</h2>
+                {courseObjects.map(courses => {
                     return(
-                        <Container>
-                            <h2>{courses.instanceid}</h2>
-                            <p>{courses.gradingRule}</p>
-                        </Container>
+                        <div>
+                            <h3>{courseObjects.instanceid}</h3>
+                            <p>{courseObjects.gradingRule}</p>
+                        </div>
                     );
                 })}
-            </Container>
+            </div>
         )
-    }
 }

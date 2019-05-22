@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import {Row, Col, DropdownButton, ButtonGroup, Dropdown, FormControl, Form, Button, Navbar, Nav, Container} from 'react-bootstrap'
 import { createStore } from 'redux'
 import { connect } from 'react-redux'
+import courseInstances from './components/courseinstances.json'
+import PersonnelCard from './components/personnelCard.js'
 import CourseSearch from './components/courseSearch.js'
-import CourseInstance from './components/courseInstance.js'
 import MyCourses from './components/myCourses.js'
 import MyTeaching from './components/myTeaching.js'
 import MyCredits from './components/myCredits.js'
@@ -70,7 +71,7 @@ class App extends Component {
 
           </Col>
         </Navbar>
-        <Row style={{marginTop:'20px'}}>
+        <Row style={{marginTop:'20px', marginBottom:'20px'}}>
             <Col  xs={3} className="d-flex align-items-end flex-column">
 
                 <Nav defaultActiveKey="/home"
@@ -98,7 +99,7 @@ class App extends Component {
 
             </Col>
 
-            <Col>{    mapStateToContent(this.props.content,this.props.courseName) }</Col>
+            <Col style={{marginRight:'50px'}}>{    mapStateToContent(this.props.content,this.props.courseName) }</Col>
         </Row>
         <Navbar
             fixed="bottom"
@@ -111,7 +112,7 @@ class App extends Component {
         >
             <Col>Student-Care korporaatio 2019</Col>
             <Col style={{textAlign: 'center'}}>
-                {this.props.user} ({this.props.userId})
+                {this.props.user} (<PersonnelCard studentId={this.props.userId}/>)
             </Col>
             <Col style={{textAlign: 'right'}}>{datetime}</Col>
         </Navbar>
@@ -129,7 +130,7 @@ class App extends Component {
 const mapStateToContent = (stateName, courseCode) => {
     switch( stateName ) {
             case 'home': return 'homeview'
-            case 'course': return <CourseInstance courseId={courseCode} />
+            case 'course': return courseInstance(courseCode)
             case 'courses' : return <MyCourses />
             case 'credits' : return <MyCredits />
             case 'teach' : return <MyTeaching />
@@ -206,5 +207,31 @@ const mapDispatchToProps = (dispatch) => {
         },
     };
 };
+
+const courseInstance = (courseId) => {
+    console.log(courseId)
+    let courseObjects = []
+    //take last courseInstance that matches with the course id
+    for (let i = 0; i < courseInstances.length; i++ ) {
+        if ( courseInstances[i].courseId == courseId ) {
+            courseObjects.push(courseInstances[i]);
+        }
+    }
+    console.log(courseObjects)
+
+    return (
+        <div>
+            <h2>{courseId}</h2>
+            {courseObjects.reverse().map(courseObjects => {
+                return(
+                    <div>
+                        <h3>{courseObjects.instanceid}</h3>
+                        <p>{courseObjects.gradingRule}</p>
+                    </div>
+                );
+            })}
+        </div>
+    )
+}
 
 export default connect(mapStateToProps,mapDispatchToProps)(App);

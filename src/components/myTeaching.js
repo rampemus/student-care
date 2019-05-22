@@ -30,7 +30,7 @@ class MyTeaching extends React.Component {
                 {this.state.courses.map(courses => {
                     return(
                         <div>
-                            <h3>{courses.instanceId}</h3>
+                            <h3>{courses.instanceId}: Kurssinimi</h3>
                             <p>Listaus oppilaista</p>
                         </div>
 

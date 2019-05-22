@@ -5,7 +5,7 @@ import App from './App'
 import * as serviceWorker from './serviceWorker'
 import { createStore, combineReducers, applyMiddleware } from "redux"
 import { Provider } from 'react-redux'
-import personnel from './personnel.json'
+import personnel from './components/personnel.json'
 
 const initState = {
     //lame-user-autentification TODO:Server authentication
