@@ -112,7 +112,7 @@ class App extends Component {
         >
             <Col>Student-Care korporaatio 2019</Col>
             <Col style={{textAlign: 'center'}}>
-                {this.props.user} (<PersonnelCard studentId={this.props.userId}/>)
+                {this.props.user} (<PersonnelCard studentId={this.props.userId} placement='top'/>)
             </Col>
             <Col style={{textAlign: 'right'}}>{datetime}</Col>
         </Navbar>
