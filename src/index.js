@@ -6,6 +6,8 @@ import * as serviceWorker from './serviceWorker'
 import { createStore, combineReducers, applyMiddleware } from "redux"
 import { Provider } from 'react-redux'
 import personnel from './components/personnel.json'
+import courseStudents from './components/coursestudents.json'
+import courseTeachers from './components/courseteachers.json'
 
 const initState = {
     //lame-user-autentification TODO:Server authentication
@@ -14,22 +16,16 @@ const initState = {
     student: true,//'personnel[0].isStudent == 1 ? true : false',
     teacher: true, //personnel[0].isTeacher == 1 ? true : false,
     administrator: true, //personnel[0].isAdmin == 1 ? true : false,
-    courseName: '0001'
+    courseName: '0001',
+
+    //data that user can change is stored here:
+    studies: courseStudents,
+    teaching: courseTeachers,
+
 }
 
-const userReducer = ( state = initState, action) => {
-    switch (action.type) {
-        case "SET_NAME":
-            state = {
-                ...state,
-                userName: action.name,
-            }
-            break
-    }
-    return state
-}
-
-const contentReducer = ( state = initState , action ) => {
+const rootReducer = ( state = initState , action ) => {
+    //content
     switch (action.type) {
         case 'SHOW_HOME':
              state = {
@@ -94,21 +90,47 @@ const contentReducer = ( state = initState , action ) => {
                 administrator: !state.administrator,
             }
             break;
+    }
+
+    //user
+    switch (action.type) {
+        case "ADD_STUDIES":
+            let newStudies = state.studies
+            console.log('Add studies: ' + action.courseName)
+            newStudies.push({
+                "instanceId": action.courseName,
+                "studentId": "1004",
+            })
+            state = {
+                ...state,
+                studies: newStudies,
+            }
+            break
+        case "ADD_TEACHING":
+            let newTeaching = state.teaching
+            console.log('Add teaching: ' + action.courseName)
+            newTeaching.push({
+                "instanceId": action.courseName,
+                "studentId": "1004"
+            })
+            state = {
+                ...state,
+                teaching: newTeaching,
+            }
+            console.log(newTeaching)
+            break
         default:
+            console.log('just a default action, nothing to see here')
             state = {
                 ...state,
             }
             break
     }
+
     return state;
 }
 
-const rootReducer = combineReducers({
-    userReducer,
-    contentReducer
-})
-
-const store = createStore(contentReducer);
+const store = createStore(rootReducer);
 store.subscribe(()=>{});
 
 ReactDOM.render(

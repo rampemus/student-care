@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import {Row, Col, DropdownButton, ButtonGroup, Dropdown, FormControl, Form, Button, Navbar, Nav, Container} from 'react-bootstrap'
+import {Row, Col, DropdownButton, ButtonGroup, Dropdown, FormControl, Form, Button, Navbar, Nav, Container, ButtonToolbar} from 'react-bootstrap';
 import { createStore } from 'redux'
 import { connect } from 'react-redux'
 import courseInstances from './components/courseinstances.json'
+import CourseInstance from './components/courseInstance.js'
 import PersonnelCard from './components/personnelCard.js'
 import CourseSearch from './components/courseSearch.js'
 import MyCourses from './components/myCourses.js'
@@ -11,6 +12,8 @@ import MyCredits from './components/myCredits.js'
 import Registry from './components/registry.js'
 import logo from './logo.svg';
 import './App.css';
+
+//mongoimport --host studentcare-shard-0/studentcare-shard-00-00-snos7.azure.mongodb.net:27017,studentcare-shard-00-01-snos7.azure.mongodb.net:27017,studentcare-shard-00-02-snos7.azure.mongodb.net:27017 --ssl --username rampemus --password <PASSWORD> --authenticationDatabase admin --db <DATABASE> --collection <COLLECTION> --type <FILETYPE> --file <FILENAME>
 
 const currentdate = new Date();
 const datetime = "Kirjautunut " + currentdate.getDate() + "."
@@ -38,19 +41,19 @@ class App extends Component {
               />
           </Col>
           <Col>
-              <DropdownButton as={ButtonGroup}
-                  title="Asetukset"
-                  id="bg-vertical-dropdown-1"
-                  variant="outline-secondary"
+                <DropdownButton as={ButtonGroup}
+                    title="Asetukset"
+                    id="bg-vertical-dropdown-1"
+                    variant="outline-secondary"
                 //access properties would never be accessed from here
                 //but just for previewing options we have these here:
-                onSelect={eventKey => {
-                    switch (eventKey) {
-                        case 'student': this.props.toggleStudent(); break;
-                        case 'teacher': this.props.toggleTeacher(); break;
-                        case 'admin': this.props.toggleAdmin(); break;
-                    }
-                }}
+                    onSelect={eventKey => {
+                        switch (eventKey) {
+                            case 'student': this.props.toggleStudent(); break;
+                            case 'teacher': this.props.toggleTeacher(); break;
+                            case 'admin': this.props.toggleAdmin(); break;
+                        }
+                    }}
                 >
                   <Dropdown.Item eventKey="student"
                       style={this.props.studentAccess ? {color:'green'} : {
@@ -130,7 +133,7 @@ class App extends Component {
 const mapStateToContent = (stateName, courseCode) => {
     switch( stateName ) {
             case 'home': return 'homeview'
-            case 'course': return courseInstance(courseCode)
+            case 'course': return <CourseInstance courseId={courseCode}/>
             case 'courses' : return <MyCourses />
             case 'credits' : return <MyCredits />
             case 'teach' : return <MyTeaching />
@@ -205,6 +208,18 @@ const mapDispatchToProps = (dispatch) => {
                 type: 'TOGGLE_ADMIN',
             });
         },
+        signToSelectedCourse: (courseInstance) => {
+            dispatch({
+                type:'ADD_STUDIES',
+                courseName: courseInstance,
+            })
+        },
+        teachSelectedCourse: (courseInstance) => {
+            dispatch({
+                type:'ADD_TEACHING',
+                courseName: courseInstance,
+            })
+        },
     };
 };
 
@@ -225,7 +240,29 @@ const courseInstance = (courseId) => {
             {courseObjects.reverse().map(courseObjects => {
                 return(
                     <div>
-                        <h3>{courseObjects.instanceid}</h3>
+                        <h3>
+                            {courseObjects.instanceid}
+                            <ButtonToolbar
+                                    style={{
+                                        marginTop: '6px', //buttons align with link
+                                    }}
+                                >
+                                {
+                                    //you will be able to sign in for the course if its instance is in year 2019
+                                    //we are missing signable course table in the data
+                                }
+                                <Button
+                                    variant="outline-success"
+                                    size="sm" disabled={courseObjects.instanceid.indexOf('2019') == -1}
+                                    // onClick={this.props.signToSelectedCourse()}
+                                >Ilmottaudu</Button>
+                                <Button
+                                    variant="outline-info"
+                                    size="sm" disabled={courseObjects.instanceid.indexOf('2019') == -1}
+                                    // onClick={this.props.teachSelectedCourse()}
+                                >Opeta</Button>
+                            </ButtonToolbar>
+                        </h3>
                         <p>{courseObjects.gradingRule}</p>
                     </div>
                 );

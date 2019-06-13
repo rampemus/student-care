@@ -58,8 +58,8 @@ class CourseSearch extends React.Component {
         getItemValue={ item => item.shortName + ': ' + item.name }
 
         renderItem={(item, highlighted) =>
-            <Row style={{ textAlign: 'left'}}>
-                <Col>
+            // <Row style={{ textAlign: 'left'}}>
+                // <Col>
                     <ButtonToolbar>
                         <Button variant="link"
                             key={item.shortName.toString()}
@@ -72,18 +72,19 @@ class CourseSearch extends React.Component {
 
                         </Button>
                     </ButtonToolbar>
-                </Col>
-                <Col xs={4}>
-                    <ButtonToolbar
-                            style={{
-                                marginTop: '6px', //buttons align with link
-                            }}
-                        >
-                        <Button variant="outline-success" size="sm" disabled>Ilmottaudu</Button>
-                        <Button variant="outline-info" size="sm" disabled>Opeta</Button>
-                    </ButtonToolbar>
-                </Col>
-            </Row>
+                // </Col>
+                // <Col xs={4}>
+                //     <ButtonToolbar
+                //             style={{
+                //                 marginTop: '6px', //buttons align with link
+                //             }}
+                //         >
+                //         <Button variant="outline-success" size="sm" onClick={this.props.signToSelectedCourse(item.shortName)}
+                //         id={item.shortName + 'sign'}>Ilmottaudu</Button>
+                //         <Button variant="outline-info" size="sm" onClick={this.props.teachSelectedCourse(item.shortName)} id={item.shortName + 'teach'}>Opeta {item.shortName}</Button>
+                //     </ButtonToolbar>
+                // </Col>
+            // </Row>
         }
         value={this.state.value}
         onChange={
@@ -92,6 +93,8 @@ class CourseSearch extends React.Component {
         onSelect={
             value => {
                 this.setState({value});
+                let focus = document.activeElement
+                console.log('Focus on: ' + focus)
                 this.props.goToSelectedCourse(value.substring(0,8));
             }
         }
@@ -102,7 +105,9 @@ class CourseSearch extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        //
+        user: state.userId,
+        courses: state.studies,
+        teachers: state.teaching,
     }
 };
 
@@ -113,7 +118,7 @@ const mapDispatchToProps = (dispatch) => {
                 type:'SHOW_COURSE',
                 courseName: courseCode,
             })
-        }
+        },
     }
 };
 

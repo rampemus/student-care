@@ -9,19 +9,6 @@ class MyCourses extends React.Component {
 
     constructor (props) {
         super(props)
-
-        let courseObjects = []
-
-        for ( let i = 0; i < courseStudents.length; i++) {
-            if (courseStudents[i].studentId == props.user) {
-                courseObjects.push(courseStudents[i])
-
-            }
-        }
-
-        this.state = {
-            courses: courseObjects,
-        }
     }
 
     render() {
@@ -29,14 +16,15 @@ class MyCourses extends React.Component {
             <Container>
                 <h2>Minun kurssit</h2>
                 <p>Alla on listattu kurssit, joihin on ilmottauduttu:</p>
-                {this.state.courses.map(courses => {
-                    return(
-                        <div>
-                            <p>{courses.instanceId} kurssin nimi</p>
-                        </div>
-
-                    );
-                })}
+                {this.props.courses.filter( courses => {
+                        return courses.studentId == this.props.user
+                    }).map(courses => {
+                        return(
+                            <div>
+                                <p>{courses.instanceId} kurssin nimi</p>
+                            </div>
+                        )
+                    })}
             </Container>
         )
     }
@@ -46,6 +34,7 @@ class MyCourses extends React.Component {
 const mapStateToProps = (state) => {
     return {
         user: state.userId,
+        courses: state.studies,
     }
 };
 

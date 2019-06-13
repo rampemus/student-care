@@ -4,6 +4,7 @@ import {Row, Col, Container, Button,ButtonToolbar} from 'react-bootstrap'
 import Table from 'react-bootstrap/Table'
 import PersonnelCard from './personnelCard.js'
 import { connect } from 'react-redux'
+import coursesData from './courses.json'
 import courseInstances from './courseinstances.json'
 import courseTeachers from './courseteachers.json'
 import courseStudents from './coursestudents.json'
@@ -22,10 +23,13 @@ class MyTeaching extends React.Component {
         }
 
         //welcome to my spaghetti parser
-        //TODO:dataserver will do this
+        //TODO:dataserver will implement this better later
         for ( let course of courseObjects) {
             course.students = [] //list of student id's into the course
             course.grades = []
+            course.info = coursesData.find(courseData => courseData.shortName == course.courseId)
+
+            console.log(course.info)
             for ( let i = 0; i < courseStudents.length; i++) {
                 if ( courseStudents[i].instanceId == course.instanceId ) {
                     course.students.push(courseStudents[i].studentId)
@@ -61,7 +65,7 @@ class MyTeaching extends React.Component {
                 {this.state.courses.map(courses => {
                     return(
                         <div>
-                            <h3>{courses.instanceId}: Kurssinimi</h3>
+                            <h3>{courses.instanceId}: {}</h3>
                             <Table responsice hover>
                                 <thead>
                                     <tr>
@@ -81,6 +85,7 @@ class MyTeaching extends React.Component {
                                                 <td><PersonnelCard studentId={student} placement='right'/></td>
                                                 {courses.exercises.map(exercise => {
                                                     return (
+                                                        //gonna print some results here that don't exist in the data
                                                         <td>{Math.floor(Math.random()*exercise.substring(exercise.indexOf(']')-1,exercise.indexOf(']')))}</td>
                                                     );
                                                 })}
@@ -91,7 +96,6 @@ class MyTeaching extends React.Component {
                                 </tbody>
                             </Table>
                         </div>
-
                     );
                 })}
             </Container>
