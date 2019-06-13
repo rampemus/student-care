@@ -96,11 +96,17 @@ const rootReducer = ( state = initState , action ) => {
     switch (action.type) {
         case "ADD_STUDIES":
             let newStudies = state.studies
-            console.log('Add studies: ' + action.courseName)
-            newStudies.push({
-                "instanceId": action.courseName,
-                "studentId": "1004",
-            })
+            // console.log('Add studies: ' + action.courseName)
+
+            if ( !newStudies.find((course)=>{
+                return course.instanceId.includes(action.courseName)
+            })) {
+                newStudies.push({
+                    "instanceId": action.courseName + '_2019',
+                    "studentId": "1004"
+                })
+            }
+
             state = {
                 ...state,
                 studies: newStudies,
@@ -108,21 +114,19 @@ const rootReducer = ( state = initState , action ) => {
             break
         case "ADD_TEACHING":
             let newTeaching = state.teaching
-            console.log('Add teaching: ' + action.courseName)
-            newTeaching.push({
-                "instanceId": action.courseName,
-                "studentId": "1004"
-            })
+            console.log(newTeaching)
+
+            if ( !newTeaching.find((course)=>{
+                return course.instanceId.includes(action.courseName)
+            })) {
+                newTeaching.push({
+                    "instanceId": action.courseName + '_2019',
+                    "studentId": "1004"
+                })
+            }
             state = {
                 ...state,
                 teaching: newTeaching,
-            }
-            console.log(newTeaching)
-            break
-        default:
-            console.log('just a default action, nothing to see here')
-            state = {
-                ...state,
             }
             break
     }
