@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import {Row, Col, Container, Button,ButtonToolbar} from 'react-bootstrap';
-import { connect } from 'react-redux';
-import courseInstances from './courseinstances.json';
-import CourseView from './courseView.js';
+import React from 'react'
+import { Button,ButtonToolbar} from 'react-bootstrap'
+import { connect } from 'react-redux'
+import courseInstances from './courseinstances.json'
+import CourseView from './courseView.js'
 
 class CourseSearch extends React.Component {
 

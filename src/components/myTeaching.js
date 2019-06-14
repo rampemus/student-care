@@ -1,24 +1,26 @@
-import React, { Component } from 'react'
-import Autocomplete from 'react-autocomplete'
-import {Row, Col, Container, Button,ButtonToolbar} from 'react-bootstrap'
+import React from 'react'
+import { Container } from 'react-bootstrap'
 import Table from 'react-bootstrap/Table'
 import PersonnelCard from './personnelCard.js'
 import { connect } from 'react-redux'
 import coursesData from './courses.json'
 import courseInstances from './courseinstances.json'
-import courseTeachers from './courseteachers.json'
 import courseStudents from './coursestudents.json'
 import courseGrades from './coursegrades.json'
 
 class MyTeaching extends React.Component {
+    // 
+    // constructor (props) {
+    //     super(props)
+    //
+    // }
 
-    constructor (props) {
-        super(props)
-
+    render() {
         let courseObjects = []
-        for ( let i = 0; i < courseTeachers.length; i++) {
-            if (courseTeachers[i].teacherId == props.user) {
-                courseObjects.push(courseTeachers[i])
+
+        for ( let i = 0; i < this.props.courses.length; i++) {
+            if (this.props.courses[i].teacherId == this.props.user) {
+                courseObjects.push(this.props.courses[i])
             }
         }
 
@@ -29,7 +31,7 @@ class MyTeaching extends React.Component {
             course.grades = []
             course.info = coursesData.find(courseData => courseData.shortName == course.courseId)
 
-            console.log(course.info)
+            // console.log(course)
             for ( let i = 0; i < courseStudents.length; i++) {
                 if ( courseStudents[i].instanceId == course.instanceId ) {
                     course.students.push(courseStudents[i].studentId)
@@ -48,21 +50,13 @@ class MyTeaching extends React.Component {
                     //result looks like: harjaa[0..6] and there is multiple of these pushes
                 }
             }
-            console.log(course)
+            // console.log(course)
         }
 
-
-
-        this.state = {
-            courses: courseObjects,
-        }
-    }
-
-    render() {
         return (
             <Container>
                 <h2>Minun pitämät kurssini</h2>
-                {this.state.courses.map(courses => {
+                {courseObjects.map(courses => {
                     return(
                         <div>
                             <h3>{courses.instanceId}: {}</h3>
@@ -106,6 +100,7 @@ class MyTeaching extends React.Component {
 const mapStateToProps = (state) => {
     return {
         user: state.userId,
+        courses: state.teaching,
     }
 };
 

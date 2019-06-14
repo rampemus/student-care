@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Image from 'react-bootstrap/Image'
 import Popover from 'react-bootstrap/Popover'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
@@ -6,11 +6,6 @@ import personnel from './personnel.json'
 import {Button} from 'react-bootstrap'
 
 export default class PersonnelCard extends React.Component {
-    constructor (props) {
-        super(props)
-
-
-    };
 
     render(){
         /***
@@ -18,7 +13,7 @@ export default class PersonnelCard extends React.Component {
             So that students will not get all info
             and teachers will not get administrator info
         ***/
-        const person = personnel.find(student => student.id === this.props.studentId)
+        let person = personnel.find(student => student.id === this.props.studentId)
         if (person.username.length < 1) {
             person = personnel.find(student => student.username === this.props.studentId)
         }

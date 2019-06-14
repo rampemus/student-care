@@ -1,6 +1,4 @@
-import React, { Component } from 'react';
-import Autocomplete from 'react-autocomplete';
-import {Row, Col, Container, Button,ButtonToolbar} from 'react-bootstrap';
+import React from 'react';
 import courseInstances from './courseinstances.json';
 import courses from './courses.json'
 

@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 import Autocomplete from 'react-autocomplete';
 import {Row, Col, Container, Button,ButtonToolbar} from 'react-bootstrap';
 import { connect } from 'react-redux';

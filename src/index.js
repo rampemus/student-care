@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
-import { createStore, combineReducers, applyMiddleware } from "redux"
+import { createStore } from "redux"
 import { Provider } from 'react-redux'
 import personnel from './components/personnel.json'
 import courseStudents from './components/coursestudents.json'
@@ -77,11 +77,17 @@ const rootReducer = ( state = initState , action ) => {
                 ...state,
                 student: !state.student,
             }
+            if ( !state.student && ( state.content == 'courses' || state.content == 'credits') ) {
+                state.content = 'home'
+            }
             break;
         case 'TOGGLE_TEACHER':
             state = {
                 ...state,
                 teacher: !state.teacher,
+            }
+            if ( !state.teacher && state.content == 'teach' ) {
+                state.content = 'home'
             }
             break;
         case 'TOGGLE_ADMIN':
@@ -89,11 +95,9 @@ const rootReducer = ( state = initState , action ) => {
                 ...state,
                 administrator: !state.administrator,
             }
-            break;
-    }
+            break
 
-    //user
-    switch (action.type) {
+            //user
         case "ADD_STUDIES":
             let newStudies = state.studies
             // console.log('Add studies: ' + action.courseName)

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import {Row, Col, DropdownButton, ButtonGroup, Dropdown, FormControl, Form, Button, Navbar, Nav, Container, ButtonToolbar} from 'react-bootstrap';
-import { createStore } from 'redux'
+import {Row, Col, DropdownButton, ButtonGroup, Dropdown, Navbar, Nav } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import courseInstances from './components/courseinstances.json'
 import CourseInstance from './components/courseInstance.js'
@@ -49,9 +48,12 @@ class App extends Component {
                 //but just for previewing options we have these here:
                     onSelect={eventKey => {
                         switch (eventKey) {
-                            case 'student': this.props.toggleStudent(); break;
-                            case 'teacher': this.props.toggleTeacher(); break;
-                            case 'admin': this.props.toggleAdmin(); break;
+                            case 'student': this.props.toggleStudent()
+                            break
+                            case 'teacher': this.props.toggleTeacher()
+                            break
+                            case 'admin': this.props.toggleAdmin()
+                            break
                         }
                     }}
                 >
@@ -85,7 +87,7 @@ class App extends Component {
 
                     onSelect={selectedKey => {
                         switch (selectedKey) {
-                            case "home": this.props.goMyCourses(); break;
+                            case "courses": this.props.goMyCourses(); break;
                             case "credits": this.props.goCredits(); break;
                             case "assesment": this.props.goTeachGrades(); break;
                             case "registry": this.props.goRegistry(); break;
@@ -93,7 +95,7 @@ class App extends Component {
                         };
                     }}>
 
-                    <Nav.Link eventKey="home" disabled={!this.props.studentAccess}>Omat kurssit</Nav.Link>
+                    <Nav.Link eventKey="courses" disabled={!this.props.studentAccess}>Omat kurssit</Nav.Link>
                     <Nav.Link eventKey="credits" disabled={!this.props.studentAccess}>Opintosuoritukset</Nav.Link>
                     <Nav.Link eventKey="assesment" disabled={!this.props.teacherAccess}>Opetus ja arviointi</Nav.Link>
                     <Nav.Link eventKey="registry" disabled={!this.props.adminAccess}>Opintorekisteri</Nav.Link>
@@ -125,7 +127,6 @@ class App extends Component {
     }
 
     componentDidMount() {
-        console.log('component mounted');
         this.props.goHome();
     }
 }
@@ -222,53 +223,5 @@ const mapDispatchToProps = (dispatch) => {
         },
     };
 };
-
-const courseInstance = (courseId) => {
-    console.log(courseId)
-    let courseObjects = []
-    //take last courseInstance that matches with the course id
-    for (let i = 0; i < courseInstances.length; i++ ) {
-        if ( courseInstances[i].courseId == courseId ) {
-            courseObjects.push(courseInstances[i]);
-        }
-    }
-    console.log(courseObjects)
-
-    return (
-        <div>
-            <h2>{courseId}</h2>
-            {courseObjects.reverse().map(courseObjects => {
-                return(
-                    <div>
-                        <h3>
-                            {courseObjects.instanceid}
-                            <ButtonToolbar
-                                    style={{
-                                        marginTop: '6px', //buttons align with link
-                                    }}
-                                >
-                                {
-                                    //you will be able to sign in for the course if its instance is in year 2019
-                                    //we are missing signable course table in the data
-                                }
-                                <Button
-                                    variant="outline-success"
-                                    size="sm" disabled={courseObjects.instanceid.indexOf('2019') == -1}
-                                    // onClick={this.props.signToSelectedCourse()}
-                                >Ilmottaudu</Button>
-                                <Button
-                                    variant="outline-info"
-                                    size="sm" disabled={courseObjects.instanceid.indexOf('2019') == -1}
-                                    // onClick={this.props.teachSelectedCourse()}
-                                >Opeta</Button>
-                            </ButtonToolbar>
-                        </h3>
-                        <p>{courseObjects.gradingRule}</p>
-                    </div>
-                );
-            })}
-        </div>
-    )
-}
 
 export default connect(mapStateToProps,mapDispatchToProps)(App);

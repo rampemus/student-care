@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import Autocomplete from 'react-autocomplete'
+import React from 'react'
 import {Row, Col, Container, Button,ButtonToolbar} from 'react-bootstrap'
 import { connect } from 'react-redux'
 import courseInstances from './courseinstances.json'
